@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
+const database = require('../../../database/index.js');
 
 const app = express();
 
