@@ -17,3 +17,5 @@ database.sync()
   .catch((err) => {
     console.error(err);
   })
+
+module.exports = database;
