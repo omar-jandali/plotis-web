@@ -1,48 +1,39 @@
 const sequelize = require('sequelize');
 const database = require('../../index.js');
 
-const User = database.define(
-  'users',
+const Profile = database.define(
+  'profile',
   {
     id: {
       type: sequelize.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    username: {
+    first_name: {
       type: sequelize.STRING,
-      allowNull: false,
       validate: {
-        isEmail: true,
-        min: 6,
-        max: 16
+        isApha: true,
       }
     },
-    email: {
+    last_name: {
       type: sequelize.STRING,
-      allowNull: false
-    },
-    password: {
-      type: sequelize.STRING,
-      allowNull: false,
       validate: {
-        min: 6,
-        max: 16
+        isAlpha: true
       }
     },
-    status: {
-      type: sequelize.INTEGER,
-      allowNull: false
-    },
-    tier: {
-      type: sequelize.INTEGER,
-      allowNull: false
-    },
-    ref_id: {
+    gender: {
       type: sequelize.STRING,
-      allowNull: false,
       validate: {
-        isAlphanumeric: true
+        isAlpha: true,
+        validate: {
+          isIn: [['M', 'F', 'O']]
+        }
+      }
+    },
+    phone: {
+      type: sequelize.INTEGER,
+      validate: {
+        max: 11
       }
     },
   },
@@ -51,7 +42,7 @@ const User = database.define(
   }
 )
 
-User.sync()
+Profile.sync()
   .then(() => {
     console.log('User database synced')
   })
@@ -59,4 +50,4 @@ User.sync()
     console.error(err)
   })
 
-module.exports = User;
+module.exports = Profile;

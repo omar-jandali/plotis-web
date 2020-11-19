@@ -6,7 +6,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const database = require('../../../database/index.js');
-const user = require('../../../database/models/user/User.js')
+const user = require('../../../database/models/user/User.js');
+const profile = require('../../../database/models/user/Profile');
 
 const app = express();
 
