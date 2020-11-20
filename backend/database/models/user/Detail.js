@@ -66,7 +66,7 @@ const Detail = database.define(
 
 Detail.sync()
   .then(() => {
-    console.log('User database synced')
+    console.log('Detail database synced')
   })
   .catch((err) => {
     console.error(err)

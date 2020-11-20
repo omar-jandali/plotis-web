@@ -44,7 +44,7 @@ const Profile = database.define(
 
 Profile.sync()
   .then(() => {
-    console.log('User database synced')
+    console.log('Profile database synced')
   })
   .catch((err) => {
     console.error(err)
