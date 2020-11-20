@@ -7,7 +7,8 @@ const path = require('path');
 
 const database = require('../../../database/index.js');
 const user = require('../../../database/models/user/User.js');
-const profile = require('../../../database/models/user/Profile');
+const profile = require('../../../database/models/user/Profile.js');
+const detail = require('../../../database/models/user/Detail.js');
 
 const app = express();
 
