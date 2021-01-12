@@ -3,7 +3,7 @@ const mysql = require('mysql');
 
 require('dotenv').config()
 
-const database = new sequelize('plotis_test', 'omarjandali', 'Hexagonz',
+const database = new sequelize('plotis_test', 'omarjandali', 'Kabuto_razer21',
   {
     'host': 'localhost',
     'dialect': 'mysql',

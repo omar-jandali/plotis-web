@@ -34,9 +34,25 @@ const User = database.define(
       type: sequelize.INTEGER,
       allowNull: false
     },
+    type: {
+      type: sequelize.INTEGER,
+      allowNull: false
+    },
     tier: {
       type: sequelize.INTEGER,
       allowNull: false
+    },
+    cip_tag: {
+      type: sequelize.STRING,
+      allowNull: false,
+    },
+    is_business: {
+      type: sequelize.INTEGER,
+      allowNull: false
+    },
+    supp_id: {
+      type: sequelize.STRING,
+      allowNull: false,
     },
     ref_id: {
       type: sequelize.STRING,
