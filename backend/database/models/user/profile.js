@@ -36,6 +36,55 @@ const Profile = database.define(
         max: 11
       }
     },
+    dob_day: {
+      type: sequelize.INTEGER,
+      validate: {
+        isNumeric: true
+      }
+    },
+    dob_month: {
+      type: sequelize.INTEGER,
+      validate: {
+        isNumeric: true
+      }
+    },
+    dob_year: {
+      type: sequelize.INTEGER,
+      validate: {
+        isNumeric: true
+      }
+    },
+    address_street: {
+      type: sequelize.STRING,
+      validate: {
+        isAlphanumeric: true
+      }
+    },
+    address_city: {
+      type: sequelize.STRING,
+      validate: {
+        isAlphanumeric: true
+      }
+    },
+    address_state: {
+      type: sequelize.STRING,
+      validate: {
+        isAlpha: true,
+        max: 3
+      }
+    },
+    address_subdivision: {
+      type: sequelize.STRING,
+      validate: {
+        isAlphanumeric: true
+      }
+    },
+    address_country: {
+      type: sequelize.STRING,
+      validate: {
+        isAlphanumeric: true
+      }
+    },
   },
   {
     timestamp: true
